@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+:root{
+    --green:#2f9076;
+    --violet:#e9e7ea;
+    --black:#333;
+}
+*{
+    font-family: "Roboto", sans-serif;
+    text-transform:capitalize;
+    text-decoration:none;
+    outline:none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::selection{
+    background:var(--green);
+    color:#b0b4b3;
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+}
+
+header{
+    width:96%;
+    background: #fff;
+    position:fixed;
+    top:2rem;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:5rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1rem 2rem;
+    z-index:1000;
+    transition:.2s;
+}
+.header-active{
+    top:0;
+    width:100%;
+    border-radius:0;
+    box-shadow:0 .1rem .3rem rgba(0,0,0,.3);
+}
+header .navbar ul{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    list-style:none;
+}
+header .navbar ul li{
+    margin:0 1rem;
+}
+header .navbar ul li a{
+    font-size:2rem;
+    color:var(--black);
+    transition:.2s;
+
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover{
+color:#2f9076;
+}
+header .logo{
+    font-size:2.5rem;
+    color:var(--green);
+    text-transform:uppercase;
+}
+header.logo.i{
+    color:var(--green);
+    padding:0 .2rem;
+}
+header .fa-bars{
+    font-size:  3rem;
+    color:var(--green);
+    cursor:pointer;
+    display:none;
+    transition:.2s;
+}
+ul li ul.dropdown li{
+    display:block;
+}
+ul li ul.dropdown{
+    width:15%;
+    background: #e8ebf1;
+    position:absolute;
+    z-index:999;
+    display:none;
+
+}
+
+ul li:hover ul.dropdown{
+    display:block;
+}
+body{
+    background-color: #2f9076;
+}
+
+/* section */
+.post {
+    
+   margin-top: 100px; 
+   margin-left: 40px;
+   color:#edf3f1;
+   
+}
+.category-badge{
+    font-size:15px;
+    color: white; 
+   
+}
+.post-title{
+    margin-top:15px;
+    font-size:25px;
+    color: white; 
+}
+.meta {
+    display: flex;
+    list-style:none;
+    margin-top:15px;
+    font-size: 15px;
+    color: white;    
+}
+.list-inline-item{
+   margin-left:10px;
+}
+
